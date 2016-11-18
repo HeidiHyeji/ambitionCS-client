@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -35,7 +36,6 @@
             android:layout_marginRight="10dp"
             /--><!--메뉴버튼-->
     </RelativeLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -44,22 +44,22 @@
         android:layout_weight="11"
         android:background="#33ffffff"
         android:orientation="vertical"
-        android:weightSum="10">
+        android:weightSum="10"
+        android:id="@+id/request_frame">
 
         <LinearLayout
-            android:id="@+id/schedule_frame"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="4"
-            android:background="@drawable/graybtn_selector"
+            android:background="@drawable/gray_button3"
             android:orientation="vertical"
             android:weightSum="1">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_margin="6dp"
+                android:layout_marginTop="6dp"
                 android:layout_weight="0.3">
 
                 <ImageView
@@ -81,12 +81,16 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_margin="6dp"
+
                 android:layout_weight="0.7"
                 android:orientation="horizontal"
-                android:weightSum="1">
+                android:weightSum="1"
+                android:id="@+id/schedule_frame"
+                android:background="@drawable/layout_selector"
+                android:gravity="center_vertical"
+                android:layout_margin="7dp">
 
                 <TextView
                     android:id="@+id/scheduleLabel"
@@ -94,15 +98,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:layout_weight="1.60"
-                    android:text="____년 __월 __일 "
-                    android:textColor="@android:color/white"
+                    android:layout_weight="0.15"
+                    android:text="____년  __월  __일"
+                    android:textColor="@android:color/black"
                     android:textSize="20sp" />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/calendar" />
+                    android:background="@drawable/calendar2"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="0.02" />
 
             </LinearLayout>
         </LinearLayout>
@@ -113,7 +119,7 @@
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="3"
-            android:background="@drawable/graybtn_selector"
+            android:background="@drawable/gray_button3"
             android:orientation="vertical"
             android:weightSum="1">
 
@@ -142,26 +148,21 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="6dp"
                 android:layout_weight="0.6"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <ExpandableListView
-                    android:id="@+id/devietypeLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight="1.60"
-                    android:text="type"
-                    android:textColor="@android:color/white"
-                    android:textSize="20sp"
-                    android:cacheColorHint="@android:color/white"
-                    android:footerDividersEnabled="false"
-                    android:headerDividersEnabled="false" />
+                <Spinner
+                    android:id="@+id/txt_device_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="20dp"
+                   android:popupBackground="#BC8F8F"
+                    android:gravity="center|start"></Spinner>
+
 
             </LinearLayout>
         </LinearLayout>
@@ -174,12 +175,13 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/check_button"
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
-                android:text="조회하기"
+                android:text="조회"
                 android:layout_gravity="center_horizontal"
-                android:textColor="?attr/actionMenuTextColor"
-                android:background="#55ffffff" />
+                android:textColor="@color/text_selector"
+                android:background="@drawable/button_selector" />
         </LinearLayout>
     </LinearLayout>
 
@@ -187,7 +189,6 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_alignParentBottom="true"
-
         android:layout_centerHorizontal="false"
         android:layout_centerInParent="false"
         android:layout_weight="3"

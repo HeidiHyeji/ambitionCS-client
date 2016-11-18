@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="device">
+        <item>노트북</item>
+        <item>태블릿</item>
+        <item>아두이노</item>
+        <item>프린터기</item>
+        <item>기타장비</item>
+    </string-array>
+</resources>

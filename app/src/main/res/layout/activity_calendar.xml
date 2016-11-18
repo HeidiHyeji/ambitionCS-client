@@ -1,170 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    android:background="#ff888888"
-    android:orientation="vertical">
-
-
-    <RelativeLayout
-        android:id="@+id/titleLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ffffffff">
-
-        <Button
-            android:id="@+id/monthPrevious"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/backward" />
-
-        <TextView
-            android:id="@+id/monthText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center_horizontal"
-            android:text="MonthView"
-            android:textSize="24dp" />
-
-        <Button
-            android:id="@+id/monthNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/forward" />
-
-    </RelativeLayout>
-
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:id="@+id/layout_root">
 
     <LinearLayout
-        android:id="@+id/weekLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal">
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="2"
+        android:background="@drawable/gray_button3"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <TextView
-            android:id="@+id/sundayTitle"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="일"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="0.3">
 
-        <TextView
-            android:id="@+id/mondayTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="월"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                app:srcCompat="@drawable/boxs" />
 
-        <TextView
-            android:id="@+id/tuesdayTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="화"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:text=" 대여 신청일 "
+                android:textColor="@android:color/white"
+                android:textSize="16dp"
+                android:id="@+id/request_schedule_label"></TextView>
 
-        <TextView
-            android:id="@+id/wednesdayTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="수"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            <Button
+                android:layout_width="52dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_selector"
+                android:text="확인"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/check_button" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/thursdayTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="목"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/fridayTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="금"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/saturdayTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#ff333333"
-            android:gravity="center"
-            android:text="토"
-            android:textColor="#ffffffff"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <GridView
-        android:id="@+id/monthView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="#ff888888"
-        android:horizontalSpacing="1dp"
-        android:numColumns="7"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="1dp" />
-
-
-    <RelativeLayout
-        android:id="@+id/scheduleLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#aaaaaaaa"
-        android:padding="4dp">
-
-        <ListView
-            android:id="@+id/scheduleList"
+        <LinearLayout
+            android:id="@+id/schedule_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:cacheColorHint="#00000000"
-            android:divider="#00000000" />
 
-    </RelativeLayout>
+            android:layout_height="0dp"
+            android:layout_margin="7dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/layout_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/selectedCalendarText"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:text="____년 __월 __일"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </LinearLayout><!--scheduleLabel에 캘린더 선택날짜 셋팅-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="#BC8F8F"
+        android:orientation="vertical"
+        android:weightSum="6"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <!--월 표시-->
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:background="@drawable/gray_button3"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/monthPrevious"
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:layout_alignParentRight="false"
+                android:background="@drawable/backward" />
+
+            <TextView
+                android:id="@+id/monthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="MonthView"
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/monthNext"
+                android:layout_width="@android:dimen/app_icon_size"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/forward" />
+
+        </RelativeLayout>
+        <!--요일표시-->
+        <LinearLayout
+            android:id="@+id/weekLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/titleLayout"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sundayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="일"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mondayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="월"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tuesdayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="화"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/wednesdayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="수"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/thursdayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="목"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fridayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="금"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saturdayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#ff333333"
+                android:gravity="center"
+                android:text="토"
+                android:textColor="#ffffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <!--날짜 표시-->
+        <GridView
+            android:id="@+id/monthView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/weekLayout"
+            android:layout_weight="4.9"
+            android:background="#BC8F8F"
+            android:horizontalSpacing="1dp"
+            android:numColumns="7"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp" />
+
+
+    </LinearLayout><!--달력-->
 
 </LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_selector" /><!--뒤로가기버튼-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="비밀번호 변경"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13"><!--본문-->
+
+        <LinearLayout
+            android:id="@+id/result_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:background="#ffffff"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="현재 비밀번호"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2"
+                            android:textColor="#000000"
+                            android:background="#FFF9E1C3"
+                            android:layout_marginRight="5dp" />
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:drawableTint="#FF4081"
+                            android:hint="현재 비밀번호"
+                            android:inputType="numberPassword"
+                            android:textSize="18sp"
+                            android:id="@+id/cur_pwd"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="새 비밀번호"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView3"
+                            android:textColor="#000000"
+                            android:textColorHighlight="@color/common_action_bar_splitter"
+                            android:background="#FFF9E1C3"
+                            android:layout_marginRight="5dp" />
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:drawableTint="#FF4081"
+                            android:hint="새 비밀번호"
+                            android:inputType="numberPassword"
+                            android:textSize="18sp"
+                            android:id="@+id/new_pwd"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="새 비밀번호 확인"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView4"
+                            android:textColor="#000000"
+                            android:background="#FFF9E1C3"
+                            android:layout_marginRight="5dp" />
+
+                        <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="60dp"
+                            android:drawableTint="#FF4081"
+                            android:hint="새 비밀번호 확인"
+                            android:inputType="numberPassword"
+                            android:textSize="18sp"
+                            android:id="@+id/new_pwd_check"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/okButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:background="#9dd67601"
+                        android:text="확인"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_selector"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </RelativeLayout><!--본문 끝-->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="false"
+        android:layout_weight="1"
+        android:textSize="68dp" />
+</LinearLayout>

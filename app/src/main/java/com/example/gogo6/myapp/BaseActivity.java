@@ -38,15 +38,4 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-   /* public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Toast.makeText(this, "홈아이콘 이벤트", Toast.LENGTH_SHORT).show();
-                //NavUtils.navigateUpFromSameTask(this);//메인으로이동
-                finish();//상위액티비티로만 이동
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }*/
 }

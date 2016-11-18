@@ -36,8 +36,7 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);//Alert띄울 액티비티 지정
-                //builder.setTitle("최초접속시 아이디는 학번, 비밀번호는 주민번호뒷자리입니다.회원가입, ID/PW찾기는 웹상의 경기대학교 홈페이지를 방문하여 확인하시기 바랍니다.");
-                builder.setMessage("최초접속시 아이디는 학번, 비밀번호는 주민번호뒷자리입니다.\n회원가입, ID/PW찾기는 웹상의 경기대학교 홈페이지를 방문하여 확인하시기 바랍니다.");
+                builder.setMessage("\n회원가입, ID/PW찾기는 과사에 방문하여 문의해주시기 바랍니다.");
                 builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();//다이얼로그 끝

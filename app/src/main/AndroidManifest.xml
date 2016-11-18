@@ -25,6 +25,22 @@
            ></activity>
         <activity android:name=".LoginActivity"
             ></activity>
+        <activity android:name=".RequestActivity"
+            ></activity>
+        <activity android:name=".CalendarActivity"
+            android:theme="@android:style/Theme.Dialog"
+        ></activity>
+        <activity android:name=".ResultActivity"
+            ></activity>
+        <activity android:name=".DetailActivity"
+            android:theme="@android:style/Theme.Dialog"
+            ></activity>
+        <activity android:name=".SettingActivity"
+            ></activity>
+        <activity android:name=".PwdChangeActivity"
+            ></activity>
+        <activity android:name=".CheckActivity"
+            ></activity>
     </application><!--android:screenOrientation="portrait"-->
 
 

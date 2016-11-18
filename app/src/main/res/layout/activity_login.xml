@@ -21,7 +21,11 @@
             android:layout_width="130dp"
             android:layout_height="35dp"
             android:layout_centerInParent="true"
-            /><!--타이틀-->
+            android:text="로그인"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:textAlignment="center"
+            android:gravity="center" /><!--타이틀-->
         <!--ImageButton
             android:layout_width="30dp"
             android:layout_height="30dp"
