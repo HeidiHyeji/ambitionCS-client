@@ -75,7 +75,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:text=" 대여 신청일 "
+                    android:text="대여신청일 "
                     android:textColor="@android:color/white"
                     android:textSize="16dp"></TextView>
             </LinearLayout>
@@ -142,7 +142,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5dp"
                     android:orientation="horizontal"
-                    android:text=" 장비 종류 "
+                    android:text="장비종류 "
                     android:textColor="@android:color/white"
                     android:textSize="16dp"></TextView>
             </LinearLayout>

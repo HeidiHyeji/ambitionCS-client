@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/introbackground"
@@ -11,17 +12,65 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-    <ImageView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:elevation="1dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:padding="@dimen/activity_horizontal_margin"
+            app:srcCompat="@drawable/introtitle"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawableTint="#aaFF3f91"
+            android:hint="서버ip를 입력하세요."
+            android:inputType="textUri"
+            android:background="#10ffffff"
+            android:layout_weight="6"
+            android:id="@+id/ipEditText"
+            android:paddingLeft="5dp"
+            android:textSize="14sp" />
+    <Button
+        android:text="연결"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/connectButton"
+        android:layout_weight="1.5"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_selector" />
+</LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="@dimen/activity_horizontal_margin"
-        app:srcCompat="@drawable/introtitle"
-        android:layout_gravity="center"
-        />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:textAlignment="center"
+        android:id="@+id/logText" />
 
 </LinearLayout>

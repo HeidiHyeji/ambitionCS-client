@@ -6,10 +6,11 @@ import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
- * Created by gogo6 on 2016-11-16.
+ * Created by 김혜지 on 2016-11-16.
+ *
+ * 설정 메뉴
  */
 
 public class SettingActivity extends BaseActivity {
@@ -25,7 +26,6 @@ public class SettingActivity extends BaseActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "홈아이콘 이벤트", Toast.LENGTH_SHORT).show();
                 //NavUtils.navigateUpFromSameTask(this);//메인으로이동
                 finish();//상위액티비티로만 이동
             }
@@ -35,18 +35,25 @@ public class SettingActivity extends BaseActivity {
         pwChangeText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "비밀번호 변경", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getApplicationContext(),PwdChangeActivity.class);
                 startActivity(intent);
             }
         });
 
         TextView question = (TextView) findViewById(R.id.question); //액션바기능 홈버튼(뒤로가기)
-        pwChangeText.setOnClickListener(new View.OnClickListener() {
+        question.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "도움말", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(getApplicationContext(),PwdChangeActivity.class);
+                Intent intent=new Intent(getApplicationContext(),QuestionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView customerCenterText = (TextView) findViewById(R.id.customerCenterText); //액션바기능 홈버튼(뒤로가기)
+        customerCenterText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),CustomerCenterActivity.class);
                 startActivity(intent);
             }
         });

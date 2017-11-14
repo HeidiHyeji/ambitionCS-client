@@ -28,21 +28,22 @@
         android:text="대여 신청"
         android:textColor="@color/text_selector"
         android:textSize="28sp"
-        android:id="@+id/requestMenu" />
+        android:id="@+id/borrowRequestButton" />
 
     <Button
-        android:id="@+id/check_menu"
+        android:id="@+id/borrowCheckButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@drawable/bluebtn_selector"
         android:gravity="center"
-        android:text="대여 확인"
         android:textColor="@color/text_selector"
+        android:text="대여 확인"
+
         android:textSize="28sp" />
 
     <Button
-        android:id="@+id/device_result"
+        android:id="@+id/equipCurStateButton"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -61,24 +62,24 @@
         android:weightSum="1">
 
         <ImageButton
-            android:id="@+id/loginMenu"
+            android:id="@+id/loginButton"
             android:layout_width="@android:dimen/app_icon_size"
             android:layout_height="@android:dimen/app_icon_size"
             android:background="@drawable/loginmenu_selector" />
 
         <ImageButton
-            android:id="@+id/settingMenu"
+            android:id="@+id/settingButton"
             android:layout_width="@android:dimen/app_icon_size"
             android:layout_height="@android:dimen/app_icon_size"
-            android:layout_toRightOf="@+id/loginMenu"
+            android:layout_toRightOf="@+id/loginButton"
             android:background="@drawable/settingmenu_selector" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/loginMenu"
-            android:layout_alignRight="@+id/loginMenu"
-            android:layout_below="@+id/loginMenu"
+            android:layout_alignLeft="@+id/loginButton"
+            android:layout_alignRight="@+id/loginButton"
+            android:layout_below="@+id/loginButton"
             android:gravity="center"
             android:text="로그인"
             android:textColor="@color/text_selector" />
@@ -86,9 +87,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/settingMenu"
-            android:layout_alignRight="@+id/settingMenu"
-            android:layout_below="@+id/settingMenu"
+            android:layout_alignLeft="@+id/settingButton"
+            android:layout_alignRight="@+id/settingButton"
+            android:layout_below="@+id/settingButton"
             android:gravity="center"
             android:text="설정"
             android:textColor="@color/text_selector" />

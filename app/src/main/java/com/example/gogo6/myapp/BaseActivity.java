@@ -6,6 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+/**Created
+ *  by 김혜지 on 2016-11-17.
+ *
+ * 외부 폰트를 모든 액티비티에 적용하기 위한
+ * Base액티비티
+ *
+ */
 public class BaseActivity extends AppCompatActivity {
     private static Typeface mTypeface = null;
 
@@ -14,12 +21,8 @@ public class BaseActivity extends AppCompatActivity {
         super.setContentView(layoutResID);
         if (mTypeface == null) {
             mTypeface = Typeface.createFromAsset(this.getAssets(), "fonts/조선일보명조.ttf"); // 외부폰트 사용
-            //mTypeface = Typeface.MONOSPACE;	// 내장 폰트 사용
         }
         setGlobalFont(getWindow().getDecorView());
-        // 또는
-        // View view = findViewById(android.R.id.content);
-        // setGlobalFont(view);
     }
 
     private void setGlobalFont(View view) {

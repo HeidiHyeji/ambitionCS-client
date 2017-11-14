@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="device">
-        <item>노트북</item>
+        <item>스마트폰</item>
         <item>태블릿</item>
+        <item>노트북</item>
+        <item>데스크탑</item>
+        <item>마우스</item>
+        <item>프린터</item>
+        <item>키보드</item>
         <item>아두이노</item>
-        <item>프린터기</item>
-        <item>기타장비</item>
+        <item>라즈베리파이</item>
+        <item>드론</item>
     </string-array>
 </resources>

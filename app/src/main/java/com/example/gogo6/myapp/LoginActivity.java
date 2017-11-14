@@ -5,23 +5,24 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.common.api.GoogleApiClient;
+import java.io.BufferedWriter;
 
 /**
- * Created by gogo6 on 2016-11-12.
+ * Created by 김혜지 on 2016-11-12.\
+ *
+ * 로그인
  */
 
 public class LoginActivity extends BaseActivity {
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
-
+    private String studentNum;
+    private String pwd;
+    private BufferedWriter networkWriter=null;
+    static Thread thread =null;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -29,6 +30,27 @@ public class LoginActivity extends BaseActivity {
         //액션 바
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        final EditText studentNumEditText = (EditText)findViewById(R.id.studentNumEditText);
+        final EditText pwdEditText = (EditText)findViewById(R.id.pwdEditText);
+        Button loginButton = (Button)findViewById(R.id.loginButton);
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                studentNum=studentNumEditText.getText().toString();
+                pwd=pwdEditText.getText().toString();
+                //로그인 버튼 누르면 서버에 로그인 정보 전송
+                finish();
+            }
+        });
+        ImageButton home = (ImageButton) findViewById(R.id.home); //액션바기능 버튼!!뒤로가기
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();//상위액티비티로만 이동
+            }
+        });
 
         //기억나지 않으세요"텍스트 클릭시 다이얼로그 생성
         TextView forgotText = (TextView) findViewById(R.id.fogotText);
@@ -46,15 +68,9 @@ public class LoginActivity extends BaseActivity {
                 dialog.show();
             }
         });
-        ImageButton home = (ImageButton) findViewById(R.id.home); //액션바기능 버튼!!뒤로가기
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "홈아이콘 이벤트", Toast.LENGTH_SHORT).show();
-                //NavUtils.navigateUpFromSameTask(this);//메인으로이동
-                finish();//상위액티비티로만 이동
-            }
-        });
+
+
+
 
     }
 

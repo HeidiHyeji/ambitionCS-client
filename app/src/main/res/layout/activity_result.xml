@@ -64,7 +64,8 @@
                     >
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff">
 
                         <TextView
                             android:layout_height="wrap_content"
@@ -75,35 +76,44 @@
                             android:layout_width="8dp"></TextView>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:background="#FFFFFF"
                             android:gravity="center"
-                            android:padding="3dp"
-                            android:text="종류" />
+                            android:text="관리번호"
+                            android:padding="3dp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:background="#FFFFFF"
                             android:gravity="center"
-                            android:padding="3dp"
-                            android:text="장비이름" />
+                            android:text="장비종류"
+                            android:id="@+id/typeColum"
+                            android:padding="3dp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:layout_marginLeft="1dp"
                             android:background="#FFFFFF"
                             android:gravity="center"
                             android:padding="3dp"
-                            android:text="상태"
+                            android:text="장비이름"
                              />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="상태" />
 
 
                     </TableRow>

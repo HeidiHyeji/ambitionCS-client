@@ -15,6 +15,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Created by 김혜지
+ * CalendarActivity의 Adapter
+ * 날짜 계산 및 생성
+ */
 public class CalendarMonthAdapter extends BaseAdapter {
 
     public static final String TAG = "CalendarMonthAdapter";

@@ -34,6 +34,7 @@
             android:layout_marginRight="10dp"
             /--><!--메뉴버튼-->
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -69,8 +70,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:drawableTint="#FF4081"
-                        android:hint="User Name"
-                        android:inputType="textEmailAddress" />
+                        android:hint="StudentId"
+                        android:inputType="textEmailAddress"
+                        android:id="@+id/studentNumEditText" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
@@ -84,7 +86,8 @@
                         android:layout_marginTop="16dp"
                         android:drawableTint="#aaFF3f91"
                         android:hint="Password"
-                        android:inputType="numberPassword" />
+                        android:inputType="numberPassword"
+                        android:id="@+id/pwdEditText" />
                 </android.support.design.widget.TextInputLayout>
 
                 <TextView

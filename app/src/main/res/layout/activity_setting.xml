@@ -106,7 +106,8 @@
                         android:textColor="@color/text_selector"
                         android:textSize="24sp"
                         android:layout_height="70dp"
-                        android:drawableRight="@drawable/helper"/>
+                        android:drawableRight="@drawable/helper"
+                        android:id="@+id/customerCenterText" />
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>

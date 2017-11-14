@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 /**
- * Created by gogo6 on 2016-11-16.
+ * Created by 김혜지 on 2016-11-16.
+ *
+ * 비밀번호 변경
  */
 
 public class PwdChangeActivity extends BaseActivity {
@@ -34,7 +35,6 @@ public class PwdChangeActivity extends BaseActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "홈아이콘 이벤트", Toast.LENGTH_SHORT).show();
                 //NavUtils.navigateUpFromSameTask(this);//메인으로이동
                 finish();//상위액티비티로만 이동
             }
@@ -44,7 +44,6 @@ public class PwdChangeActivity extends BaseActivity {
         OkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "비밀번호 변경확인", Toast.LENGTH_SHORT).show();
                 if("".equals(curPwd.getText().toString())){
                     checkNullPwd();
                 }

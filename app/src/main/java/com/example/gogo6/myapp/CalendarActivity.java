@@ -14,6 +14,10 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Created by 김혜지
+ * 대여 신청을 위한 캘린더
+ */
 
 public class CalendarActivity extends Activity {
 
@@ -30,12 +34,6 @@ public class CalendarActivity extends Activity {
 
     Button checkButton;
     int day;
-    //EditText scheduleInput;
-    //Button saveButton;
-
-    //ListView scheduleList;
-   // ScheduleListAdapter scheduleAdapter;
-    //ArrayList<ScheduleListItem> outScheduleList;
 
     public static final int REQUEST_CODE_SCHEDULE_INPUT = 1001;
 
@@ -45,11 +43,6 @@ public class CalendarActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_calendar);
-       // getWindow().setFeatureDrawableResource(Window.FEATURE_LEFT_ICON,android.R.drawable.ic_dialog_alert);
-
-        //액션 바 숨기기
-        //ActionBar actionBar = getSupportActionBar();
-       // actionBar.hide();
 
         selectedCalendarText=(TextView)findViewById(R.id.selectedCalendarText);
         checkButton = (Button) findViewById(R.id.check_button);
@@ -77,14 +70,7 @@ public class CalendarActivity extends Activity {
                 if(day != 0){
                     checkButton.setEnabled(true);
                 }
-/*
-                outScheduleList = monthViewAdapter.getSchedule(position);
-                if (outScheduleList == null) {
-                    outScheduleList = new ArrayList<ScheduleListItem>();
-                }
-          //      scheduleAdapter.scheduleList = outScheduleList;
 
-             //   scheduleAdapter.notifyDataSetChanged();*/
             }
         });
 
@@ -117,19 +103,12 @@ public class CalendarActivity extends Activity {
 
         curPosition = -1;
 
-     //   scheduleList = (ListView)findViewById(R.id.scheduleList);
-   //     scheduleAdapter = new ScheduleListAdapter(this);
-     //   scheduleList.setAdapter(scheduleAdapter);
-
-
         checkButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
 
                     Intent tmp1 = new Intent();
                     tmp1.putExtra("selectedCalendar", selectedCalendarText.getText());
-
-                    Toast.makeText(getApplicationContext(), "확인되었습니다.", Toast.LENGTH_LONG).show();
 
                     setResult(RESULT_OK, tmp1);
                     finish();
@@ -145,83 +124,11 @@ public class CalendarActivity extends Activity {
         checkButton.setTypeface(typeface);
 
     }
-
-
     private void setMonthText() {
         curYear = monthViewAdapter.getCurYear();
         curMonth = monthViewAdapter.getCurMonth();
 
         monthText.setText(curYear + "년 " + (curMonth+1) + "월");
     }
-/*
-    private void addOptionMenuItems(Menu menu) {
-        int id = Menu.FIRST;
-        menu.clear();
-
-        menu.add(id, id, Menu.NONE, "일정 추가");
-    }
-*/
-    /*
-    private void showScheduleInput() {
-    //    Intent intent = new Intent(this, ScheduleInputActivity.class);
-    //    startActivityForResult(intent, REQUEST_CODE_SCHEDULE_INPUT);
-    }
-*/
-/*
-    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-
-        if (intent != null) {
-            if (requestCode == REQUEST_CODE_SCHEDULE_INPUT) {
-                String time = intent.getStringExtra("time");
-                String message = intent.getStringExtra("message");
-
-                if (message != null) {
-                    Toast toast = Toast.makeText(getBaseContext(), "result code : " + resultCode + ", time : " + time + ", message : " + message, Toast.LENGTH_LONG);
-                    toast.show();
-
-                    ScheduleListItem aItem = new ScheduleListItem(time, message);
-
-
-                    if (outScheduleList == null) {
-                        outScheduleList = new ArrayList<ScheduleListItem>();
-                    }
-                    outScheduleList.add(aItem);
-
-                    monthViewAdapter.putSchedule(curPosition, outScheduleList);
-
-             //       scheduleAdapter.scheduleList = outScheduleList;
-            //        scheduleAdapter.notifyDataSetChanged();
-                }
-            }
-        }
-
-    }
-*/
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        addOptionMenuItems(menu);
-
-        return true;
-    }
-*/
-    /*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case Menu.FIRST:
-                showScheduleInput();
-
-                return true;
-            default:
-                break;
-        }
-
-        return false;
-    }
-    */
 }
 

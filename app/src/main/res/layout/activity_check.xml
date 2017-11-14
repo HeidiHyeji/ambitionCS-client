@@ -58,35 +58,6 @@
                     android:paddingTop="10dp"
                     android:id="@+id/check_layout">
 
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:background="#464567"
-                        android:drawableRight="@drawable/request"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="5dp"
-                        android:text="2016.11.15.(화)\nIPad\nD+2"
-                        android:textColor="#ffffff"
-                        android:textSize="15dp"
-                        android:lineSpacingExtra="5dip" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:background="#464567"
-                        android:drawableRight="@drawable/return_img"
-                        android:lineSpacingExtra="5dip"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingTop="5dp"
-                        android:text="2016.11.17.(목)\nMacBook\nD-0"
-                        android:textColor="#ffffff"
-                        android:textSize="15dp" />
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>

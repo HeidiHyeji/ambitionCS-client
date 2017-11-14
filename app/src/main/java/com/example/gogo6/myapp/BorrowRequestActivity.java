@@ -14,13 +14,15 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
- * Created by gogo6 on 2016-11-14.
+ * Created by 김혜지 on 2016-11-14.
+ * 대여신청
+ * 메인화면의 대여신청메뉴 선택시 호출되는 액티비티
+ * 대여신청할 날짜와 장비종류를 선택할 수 있다.
  */
 
-public class RequestActivity extends BaseActivity {
+public class BorrowRequestActivity extends BaseActivity {
     TextView scheduleLabel;
     private static final int FirstMsg=1;
     @Override
@@ -38,7 +40,6 @@ public class RequestActivity extends BaseActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long l) {
-                // Toast.makeText(getApplicationContext(), sAdapter.getItem(position), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -51,7 +52,6 @@ public class RequestActivity extends BaseActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "홈아이콘 이벤트", Toast.LENGTH_SHORT).show();
                 //NavUtils.navigateUpFromSameTask(this);//메인으로이동
                 finish();//상위액티비티로만 이동
             }
@@ -62,9 +62,8 @@ public class RequestActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent tmp1=new Intent();
-                Toast.makeText(getApplicationContext(),"달력", Toast.LENGTH_LONG).show();
                 //액티비티 전환코드
-                tmp1.setClass(RequestActivity.this,CalendarActivity.class);
+                tmp1.setClass(BorrowRequestActivity.this,CalendarActivity.class);
                 startActivityForResult(tmp1,FirstMsg);
             }
         });
@@ -76,9 +75,8 @@ public class RequestActivity extends BaseActivity {
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //조회하기 버튼을 누르면 서버한테 날짜와 장비종류를 전송하여 빌릴수있는 장비DB를 받는다.
-                Toast.makeText(getApplicationContext(),"장비 현황화면", Toast.LENGTH_LONG).show();
                 if(scheduleLabel.getText().equals("____년  __월  __일")){
-                    AlertDialog.Builder builder = new AlertDialog.Builder(RequestActivity.this);//Alert띄울 액티비티 지정
+                    AlertDialog.Builder builder = new AlertDialog.Builder(BorrowRequestActivity.this);//Alert띄울 액티비티 지정
                     builder.setMessage("대여 신청일을\n선택하여 주십시오.");
                     builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
@@ -90,7 +88,8 @@ public class RequestActivity extends BaseActivity {
                 }
                 else {
                     //액티비티 전환코드==>일단을 이렇게 해둠!!인텐트까지 전송하거나 나중에 수정
-                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), EquipCurStateActivity.class);
+                    intent.putExtra("menu","BorrowRequest");
                     startActivity(intent);
                 }
             }

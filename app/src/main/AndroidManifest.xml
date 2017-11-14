@@ -3,7 +3,7 @@
     package="com.example.gogo6.myapp"
 
     >
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -25,22 +25,32 @@
            ></activity>
         <activity android:name=".LoginActivity"
             ></activity>
-        <activity android:name=".RequestActivity"
+        <activity android:name=".BorrowRequestActivity"
             ></activity>
         <activity android:name=".CalendarActivity"
             android:theme="@android:style/Theme.Dialog"
         ></activity>
-        <activity android:name=".ResultActivity"
+        <activity android:name=".EquipCurStateActivity"
             ></activity>
-        <activity android:name=".DetailActivity"
+        <activity android:name=".EquipDetailActivity"
             android:theme="@android:style/Theme.Dialog"
             ></activity>
         <activity android:name=".SettingActivity"
             ></activity>
         <activity android:name=".PwdChangeActivity"
             ></activity>
-        <activity android:name=".CheckActivity"
+        <activity android:name=".BorrowCheckActivity"
             ></activity>
+        <activity android:name=".QuestionActivity"
+            ></activity>
+        <activity android:name=".CustomerCenterActivity"
+            ></activity>
+        <service android:name=".ClientService">
+            <intent-filter>
+                <action android:name="com.example.gogo6.myapp.ClientService"/>
+            </intent-filter>
+        </service>
+
     </application><!--android:screenOrientation="portrait"-->
 
 

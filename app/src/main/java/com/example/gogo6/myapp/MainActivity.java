@@ -7,78 +7,76 @@ import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
+
+/**
+ * Created by 김혜지 on 2016-11-12.\
+ *
+ * 메인
+ */
 
 public class MainActivity extends BaseActivity {
-
+    private static final int LoginMsg=1;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//객체화:메모리로딩
 
         //액션 바 감추기
-        ActionBar actionBar=getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        //로그인 메뉴 클릭시 액티비티 전환
-        ImageButton loginMenu=(ImageButton)findViewById(R.id.loginMenu);
-        loginMenu.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"로그인화면", Toast.LENGTH_LONG).show();
-
-                //액티비티 전환코드
-                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
         //대여신청 메뉴 클릭시 액티비티 전환
-        Button requestMenu=(Button)findViewById(R.id.requestMenu);
-        requestMenu.setOnClickListener(new View.OnClickListener() {
+        Button borrowRequestButton = (Button) findViewById(R.id.borrowRequestButton);
+        //borrowRequestButton.setEnabled(false);
+       // borrowRequestButton.setBackgroundResource(R.drawable.gray_button2);
+        //borrowRequestButton.setTextColor(Color.parseColor("#000000"));
+        borrowRequestButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"대여신청화면", Toast.LENGTH_LONG).show();
-
                 //액티비티 전환코드
-                Intent intent=new Intent(getApplicationContext(),RequestActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button device_result=(Button)findViewById(R.id.device_result);
-        device_result.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"장비 현황", Toast.LENGTH_LONG).show();
-
-
-                Intent intent=new Intent(getApplicationContext(),ResultActivity.class);
-                startActivity(intent);
-            }
-            });
-
-        ImageButton settingMenu=(ImageButton)findViewById(R.id.settingMenu);
-        settingMenu.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"설정", Toast.LENGTH_LONG).show();
-
-                Intent intent=new Intent(getApplicationContext(),SettingActivity.class);
-                startActivity(intent);
-            }
-        });
-        Button checkMenu=(Button)findViewById(R.id.check_menu);
-        checkMenu.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"대여 확인", Toast.LENGTH_LONG).show();
-
-                Intent intent=new Intent(getApplicationContext(),CheckActivity.class);
+                Intent intent = new Intent(getApplicationContext(), BorrowRequestActivity.class);
                 startActivity(intent);
             }
         });
 
+        Button borrowCheckButton = (Button) findViewById(R.id.borrowCheckButton);
+        //borrowCheckButton.setEnabled(false);
+        //borrowCheckButton.setBackgroundResource(R.drawable.blue_button2);
+        //borrowCheckButton.setTextColor(Color.parseColor("#000000"));
+        borrowCheckButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BorrowCheckActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button equipCurStateButton = (Button) findViewById(R.id.equipCurStateButton);
+        equipCurStateButton.setOnClickListener(new View.OnClickListener() {
 
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EquipCurStateActivity.class);
+                intent.putExtra("menu", "EquipCurState");
+                startActivity(intent);
+            }
+        });
 
+        //로그인 메뉴 클릭시 액티비티 전환
+        ImageButton loginButton = (ImageButton) findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
 
-        }
+            public void onClick(View view) {
+                //액티비티 전환코드
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton settingButton = (ImageButton) findViewById(R.id.settingButton);
+        settingButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
 }

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_selector" /><!--뒤로가기버튼-->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:gravity="center"
+            android:text="고객센터"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13"><!--본문-->
+
+        <LinearLayout
+            android:id="@+id/cs_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:background="#aaffffff"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#AAD0BFAF">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:gravity="left"
+                                android:padding="3dp"
+                                android:text="소개 및 저작권"
+                                android:textColor="#000000"
+                                android:textSize="7sp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:drawableLeft="@drawable/fuselogo"
+                                android:padding="3dp"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                        </TableRow>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:gravity="left"
+                            android:paddingLeft="3dp"
+                            android:text="FUSE (FUture Software Engineer)"
+                            android:textColor="#000000"
+                            android:textSize="10sp" />
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:padding="3dp"
+                                android:text="김혜지, 김솔이, 김우현, 최진원"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:padding="3dp"
+                                android:text="031)249-9670"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:padding="3dp"
+                                android:text="경기도 수원시 영통구 광교산로 154-42\n육영관 8505호, 컴퓨터과학과"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:padding="3dp"
+                                android:text="http://cs.kyonggi.ac.kr/"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+                        </TableRow>
+
+                        <View
+                            android:layout_height="1px"
+                            android:background="#000000" />
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_height="1px"
+                                android:background="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:background="#AAD0BFAF"
+                                android:padding="3dp"
+                                android:text="버전정보"
+                                android:textColor="#000000"
+                                android:textSize="7sp" />
+
+                            <View
+                                android:layout_height="1px"
+                                android:background="#000000" />
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:elevation="1dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|left"
+                                    android:layout_margin="1dp"
+                                    android:drawableLeft="@drawable/cslogo"
+                                    android:padding="3dp" />
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#AAD0BFAF"></TableRow>
+                            </TableRow>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:gravity="center"
+                                android:text="현재버전          v1.0.0"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:gravity="center"
+                                android:text="최신버전          v1.0.0"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="1dp"
+                                android:gravity="center"
+                                android:text="현재 최신 버전입니다."
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <View
+                                android:layout_height="1px"
+                                android:background="#000000" />
+                        </TableLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout><!--본문 끝-->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="false"
+        android:layout_weight="1"
+        android:textSize="68dp" />
+</LinearLayout>
